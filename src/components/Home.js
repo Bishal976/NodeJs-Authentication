@@ -7,7 +7,7 @@ import Popular from './Popular';
 import Review from './Review';
 import SlideBody from './SlideBody';
 export default function Home(){
-    //et items=[100,100,232];
+
     return (
         <>
         <Navbar/>
@@ -19,7 +19,7 @@ export default function Home(){
         <NewAdded/>
         <h2>Review</h2>
         <Review/>
-        <Footer/>
+        <Footer />
         {/* {
             items.map(items=>{
                 return <>{items}<Product/></>

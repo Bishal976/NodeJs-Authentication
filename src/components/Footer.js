@@ -1,7 +1,16 @@
-export default function Footer(){
-    return (
-        <>
-        <div style={{height:"250px", width:"100%",backgroundColor:"aqua"}}><h1>Footer section</h1></div>
-        </>
-    )
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+function footer() {
+  return (
+    <Container>
+      <Row>
+        <Col>1 of 2</Col>
+        <Col>2 of 2</Col>
+      </Row>
+    </Container>
+  );
 }
+
+export default footer;
