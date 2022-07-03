@@ -3,13 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom/client';
 import {Provider} from 'react-redux';
 import store from './store';
-import App from './App.js';
+import App from './App.js';                     
 import { Auth0Provider } from '@auth0/auth0-react';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const domain = "dev-258a84mh.au.auth0.com";
-const clientId = "7RUIZi8lxMShO03A1D1ECotHChbQ2Iqk";
+const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
 root.render(
   <Auth0Provider
