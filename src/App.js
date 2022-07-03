@@ -1,17 +1,20 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './components/Home';
+import React from "react"
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import UpdatePro from './components/UpdatePro';
-function App() {
-  return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home/>}></Route>
-        <Route path="/update" element={<UpdatePro />}></Route>
-    </Routes>
-    </BrowserRouter>
-  );
-}
+import Home from './components/Home';
+import {useAuth0} from "@auth0/auth0-react";
 
-export default App;
+export default function App() {
+    const {isLoading} = useAuth0();
+    if (isLoading) return <div>Loading...</div>
+    
+    return ( 
+        <>
+        <BrowserRouter>
+           <Routes>
+               <Route path="/" element={<Home/>}></Route>
+           </Routes>
+       </BrowserRouter> 
+           
+        </>
+  )
+}
