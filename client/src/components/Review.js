@@ -24,7 +24,9 @@ export default function Review(){
     </Form.Group>
     <Button type="submit">Submit</Button>
   </fieldset>
-</Form>
+        </Form>
+        
+        <a href="http://localhost:4000/">make payment</a>
         </>
     )
 }

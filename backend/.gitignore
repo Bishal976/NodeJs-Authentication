@@ -4,6 +4,7 @@
 node_modules
 /.pnp
 .pnp.js
+routes/Paytm/config.js
 
 # testing
 /coverage
